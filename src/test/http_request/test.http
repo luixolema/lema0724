@@ -1,0 +1,91 @@
+# integration test cases:
+
+# 1
+POST /api/v1/checkout
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "toolCode": "JAKR",
+  "rentalDayCount": 5,
+  "discountPercent": 101,
+  "checkOutDate": "2015-09-03"
+}
+
+###
+# 2
+POST /api/v1/checkout
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "toolCode": "LADW",
+  "rentalDayCount": 3,
+  "discountPercent": 10,
+  "checkOutDate": "2020-07-02"
+}
+
+###
+# 3
+POST /api/v1/checkout
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "toolCode": "CHNS",
+  "rentalDayCount": 5,
+  "discountPercent": 25,
+  "checkOutDate": "2015-07-02"
+}
+
+###
+# 4
+POST /api/v1/checkout
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "toolCode": "JAKD",
+  "rentalDayCount": 3,
+  "discountPercent": 10,
+  "checkOutDate": "2015-09-03"
+}
+
+###
+# 5
+POST /api/v1/checkout
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "toolCode": "JAKD",
+  "rentalDayCount": 3,
+  "discountPercent": 10,
+  "checkOutDate": "2020-07-02"
+}
+
+###
+# not found
+POST /api/v1/checkout
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "toolCode": "doesnt_exist",
+  "rentalDayCount": 1,
+  "discountPercent": 10,
+  "checkOutDate": "2025-07-02"
+}
+
+###
+# validation error
+POST /api/v1/checkout
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "toolCode": "",
+  "rentalDayCount": 0,
+  "discountPercent": 101,
+  "checkOutDate": "2021-07-02"
+}
