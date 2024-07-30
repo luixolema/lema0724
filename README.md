@@ -12,3 +12,5 @@ Considerations:
 * Most of the integration tests could be tested as unit tests in the main method of the service.
   - I just wanted to provide a "solve all test cases in 1 file" so that validation errors (controller layer) are also tested in the same file.
   
+Postman testing:
+https://www.postman.com/spacecraft-saganist-38434058/workspace/cardinaltest/collection/21760723-4b5697af-5e61-4680-8c4e-d354c03b65c5?action=share&creator=21760723
