@@ -21,28 +21,28 @@ public class RentalAgreement {
     @GeneratedValue
     private Long id;
 
-    @Column
+    @Column(nullable = false)
     private String toolCode;
 
-    @Column
+    @Column(nullable = false)
     private String toolType;
 
-    @Column
+    @Column(nullable = false)
     private String toolBrand;
 
-    @Column
+    @Column(nullable = false)
     private Integer rentalDays;
 
-    @Column
+    @Column(nullable = false)
     private LocalDate checkOutDate;
 
-    @Column
+    @Column(nullable = false)
     private LocalDate dueDate;
 
-    @Column
+    @Column(nullable = false)
     private BigDecimal dailyRentalCharge;
 
-    @Column
+    @Column(nullable = false)
     private Integer chargeDays;
 
     @Column(precision = 10, scale = 2)

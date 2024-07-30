@@ -17,18 +17,18 @@ public class ToolType {
     @GeneratedValue
     private Long id;
 
-    @Column
+    @Column(nullable = false)
     private String name;
 
-    @Column(precision = 10, scale = 2)
+    @Column(precision = 10, scale = 2, nullable = false)
     private BigDecimal dailyCharge;
 
-    @Column
+    @Column(nullable = false)
     private Boolean weekdayCharge;
 
-    @Column
+    @Column(nullable = false)
     private Boolean weekendCharge;
 
-    @Column
+    @Column(nullable = false)
     private Boolean holidayCharge;
 }
