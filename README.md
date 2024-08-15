@@ -2,7 +2,7 @@ Considerations:
  * The checkout date will be considered as the first (inclusive) day in the rental agreement, therefore the checkout date is counted as 1 day.
    - example: checoutDate = 7/29/2024, rentalDayCount = 1, dueDate= 7/29/2024 (same date)
    - example: checoutDate = 7/29/2024, rentalDayCount = 2, dueDate= 7/30/2024 (2 days 2 checked dates: 7/29/2024, 7/30/2024)
-   - There are some comments about it in the code.
+   - Why?: if the price is based on a daily charge and that changes depending on the day of the week  etc (not in hours). then is not trivial to decide whether to charge for 1 day when the client comes to the store on a Friday and asks for a 1-day rental period. Should the system charge Friday or Saturday prices or a combination of both, what does it depend on? It's easier and more clear to start charging (by days) counting including the checkout day. Having this in mind the consumer system (UI or other service) could send the correct starting counting date for each case. 
 * There is no API security implementation
   - not part of the requirements, and could be done with too many solutions (easy suggestion: cognito library: aws-java-sdk-cognitoidp)
 * No API documentation
